@@ -50,8 +50,7 @@ public class PhotoAdapter extends BaseAdapter {
             dataitem = (MyView) convertView.getTag();
         }
 
-//        new DownloadImage(dataitem.iv_photo).excutte(photo_list.get(position).getSource_photo());
-        Picasso.get().load(photo_list.get(position).getSource_photo()).resize(300,400).centerCrop().into(dataitem.iv_photo);
+        Picasso.get().load(photo_list.get(position).getSource_photo()).into(dataitem.iv_photo);
         dataitem.tv_caption.setText(photo_list.get(position).getTitle_photo());
         return convertView;
     }
